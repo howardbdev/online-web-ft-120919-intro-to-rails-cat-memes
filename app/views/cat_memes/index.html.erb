@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cat Memes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Alt</th>
+      <th>User</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cat_memes.each do |cat_meme| %>
+      <tr>
+        <td><%= cat_meme.title %></td>
+        <td><%= cat_meme.alt %></td>
+        <td><%= cat_meme.user_id %></td>
+        <td><%= cat_meme.image_url %></td>
+        <td><%= link_to 'Show', cat_meme %></td>
+        <td><%= link_to 'Edit', edit_cat_meme_path(cat_meme) %></td>
+        <td><%= link_to 'Destroy', cat_meme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cat Meme', new_cat_meme_path %>

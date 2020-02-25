@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @cat_meme.title %>
+</p>
+
+<p>
+  <strong>Alt:</strong>
+  <%= @cat_meme.alt %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @cat_meme.user_id %>
+</p>
+
+  <img src="<%= @cat_meme.image_url %>" alt="<%= @cat_meme.alt %>">
+
+<%= link_to 'Edit', edit_cat_meme_path(@cat_meme) %> |
+<%= link_to 'Back', cat_memes_path %>

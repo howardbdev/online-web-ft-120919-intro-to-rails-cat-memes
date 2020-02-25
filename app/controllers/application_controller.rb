@@ -1,0 +1,3 @@
+class ApplicationController < ActionController::Base
+  # custom helper methods go here...
+end
